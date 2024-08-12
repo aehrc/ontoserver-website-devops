@@ -2,10 +2,10 @@
   uses: actions/checkout@v4.1.7
   with:
     # Repository name with owner. For example, actions/checkout
-    repository: # optional, default is ${{ github.repository }}
+#    repository: # optional, default is ${{ github.repository }}
     # The branch, tag or SHA to checkout. When checking out the repository that triggered a workflow, this defaults to the reference or SHA for that event.  Otherwise, uses the default branch.
 
-    ref: # optional
+#    ref: # optional
     # Personal access token (PAT) used to fetch the repository. The PAT is configured with the local git config, which enables your scripts to run authenticated git commands. The post-job step removes the PAT.
 
 #We recommend using a service account with the least permissions necessary. Also when generating a new PAT, select the least scopes necessary.
