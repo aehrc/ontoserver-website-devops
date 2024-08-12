@@ -1,4 +1,4 @@
-            - name: Checkout
+- name: Checkout
   uses: actions/checkout@v4.1.7
   with:
     # Repository name with owner. For example, actions/checkout
