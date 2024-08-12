@@ -16,7 +16,7 @@ jobs:
       with:
         packages: tidy
     - name: Find broken pages
-      run:  find site/ -type f -name "*.html" -exec tidy -file errors.txt -modify -latin1 -indent {} +
+      run:  find site/ -type f -name "*.html" -exec tidy -file errors.txt -modify -latin1 -indent {} \;
     - uses: actions/upload-artifact@v4
       with:
         # Name of the artifact to upload.
