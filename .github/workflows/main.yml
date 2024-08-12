@@ -12,3 +12,7 @@ jobs:
     - uses: actions/checkout@v4
       with:
         submodules: 'true'
+    - uses: awalsh128/cache-apt-pkgs-action@latest
+      with:
+        packages: tidy
+ 
