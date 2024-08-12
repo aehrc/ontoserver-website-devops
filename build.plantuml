@@ -1,0 +1,22 @@
+@startuml
+
+actor Dion
+
+Dion -> CI : trigger build
+
+CI -> WP_CLI : 
+
+WP_CLI -> WP
+
+
+WP -> SS
+
+SS -> Github
+
+Github -> CI
+
+CI -> CI : record build number
+
+CI -> Dion
+
+@enduml 
