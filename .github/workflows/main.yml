@@ -17,7 +17,7 @@ jobs:
         packages: tidy
     - name: Find broken pages
       # https://manpages.org/tidy
-      run:  find site/ -type f -name "*.html" -exec tidy -file errors.txt -modify -utf8 -indent --clean yes --doctype html5 {} \;
+      run:  find site/ -type f -name "*.html" -exec tidy -file {}-error.txt -modify -utf8 -indent --clean yes --doctype html5 {} \;
     - uses: actions/upload-artifact@v4
       with:
         # Name of the artifact to upload.
@@ -89,3 +89,20 @@ jobs:
         # Optional. Default is 'false'
         overwrite: false
         
+#  lhci:
+#    name: Lighthouse
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#      - name: Use Node.js 16.x
+#        uses: actions/setup-node@v3
+#        with:
+#          node-version: 16.x
+#      - name: npm install, build
+#        run: |
+#          npm install
+#          npm run build
+#      - name: run Lighthouse CI
+#        run: |
+#          npm install -g @lhci/cli@0.14.x
+#          lhci autorun       
